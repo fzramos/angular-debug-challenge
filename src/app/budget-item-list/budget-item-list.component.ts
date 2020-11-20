@@ -16,13 +16,13 @@ export interface UpdateEvent{
 })
 export class BudgetItemListComponent implements OnInit {
 
-  @Input() budgetItems: BudgetItem[] = []
+  @Input() budgetItems: BudgetItem[] = [];
 
   // Adding Outputs for Updates and Deletes
   @Output() delete: EventEmitter<BudgetItem> = new EventEmitter<BudgetItem>();
   @Output() update: EventEmitter<UpdateEvent> = new EventEmitter<UpdateEvent>();
 
-  constructor() { }
+  constructor(public dialog: MatDialog) { }
 
   onDelete(item: BudgetItem){
     this.delete.emit(item);

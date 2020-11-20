@@ -13,12 +13,14 @@ export class EditItemModalComponent implements OnInit {
   constructor(public dialogRef:MatDialogRef<EditItemModalComponent>,
     @Inject(MAT_DIALOG_DATA) public item: BudgetItem) { }
 
-    //onSubmitted method which handles new updates
-    onSubmitted(updatedItem:BudgetItem){
-      this.dialogRef.close(updatedItem)
-    }
+
 
   ngOnInit(): void {
+  }
+
+  //onSubmitted method which handles new updates
+  onSubmitted(updatedItem:BudgetItem){
+    this.dialogRef.close(updatedItem)
   }
 
 }

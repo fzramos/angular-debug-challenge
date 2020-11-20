@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { BudgetItem } from '../shared/budget-item';
 import { UpdateEvent } from '../budget-item-list/budget-item-list.component';
+
+
 @Component({
   selector: 'app-main-page',
   templateUrl: './main-page.component.html',
